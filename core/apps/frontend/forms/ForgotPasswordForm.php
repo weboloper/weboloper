@@ -13,16 +13,16 @@ class ForgotPasswordForm extends Form
     public function initialize()
     {
         $email = new Text('email', [
-            'placeholder' => 'E-postanız',
+            'placeholder' => 'E-mail',
             'class' => 'form-control'
         ]);
 
         $email->addValidators([
             new PresenceOf([
-                'message' => 'E-posta gerekli'
+                'message' => 'E-mail is required'
             ]),
             new Email([
-                'message' => 'E-posta geçersiz'
+                'message' => 'E-mail is not valid'
             ])
         ]);
 

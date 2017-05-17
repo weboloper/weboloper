@@ -18,16 +18,16 @@ class LoginForm extends Form
     {
         // Email
         $email = new Text('email', [
-            'placeholder' => 'E-posta',
+            'placeholder' => 'E-mail',
             'class' => 'form-control'
         ]);
 
         $email->addValidators([
             new PresenceOf([
-                'message' => 'E-posta gerekli'
+                'message' => 'E-mail is required'
             ]),
             new Email([
-                'message' => 'E-posta geçersiz'
+                'message' => 'E-mail is not valid'
             ])
         ]);
 
@@ -35,12 +35,12 @@ class LoginForm extends Form
 
         // Password
         $password = new Password('password', [
-            'placeholder' => 'Şifre',
+            'placeholder' => 'Password',
             'class' => 'form-control'
         ]);
 
         $password->addValidator(new PresenceOf([
-            'message' => 'Şifre gerekli'
+            'message' => 'Password is required'
         ]));
 
         $password->clear();
@@ -52,7 +52,7 @@ class LoginForm extends Form
             'value' => 'yes',
         ]);
 
-        $remember->setLabel('Beni hatırla');
+        $remember->setLabel('Remember me');
 
         $this->add($remember);
 
