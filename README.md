@@ -1,8 +1,7 @@
 # weboloper
 A multi-module Phalcon application  (Acl, Auth, SecurityPlugin, Volt)
 
-This is a sample multi-module application for [Phalcon Framework](https://github.com/phalcon/cphalcon). 
-
+This is a sample multi-module application for [Phalcon Framework](https://github.com/phalcon/cphalcon).
 
 ## Get Started
 
@@ -24,3 +23,12 @@ cat schemas/weboloper.sql | mysql -u root vokuro
 ```
 
 Also you can override application config by creating `app/config/config.php` 
+
+
+## Notes
+
+### Modules
+Weboloper uses Frontend module for publishing, and Backend module for administration.
+
+### @toDo
+Private resources are located at /core/common/plugins/Security/SecurityPlugin.php, move private resources to seperate file to config folder
