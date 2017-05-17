@@ -19,7 +19,7 @@ Then you'll need to create the database and initialize schema:
 
 ```bash
 echo 'CREATE DATABASE weboloper' | mysql -u root
-cat schemas/weboloper.sql | mysql -u root vokuro
+cat schemas/weboloper.sql | mysql -u root weboloper 
 ```
 
 Also you can override application config by creating `app/config/config.php` 
