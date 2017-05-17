@@ -2,18 +2,13 @@
 {% block content %}
 <form method="post" autocomplete="off">
 
-<ul class="pager">
-    <li class="previous pull-left">
-        {{ link_to("/backend/users", "&larr; Go Back") }}
-    </li>
-    <li class="pull-right">
-        {{ submit_button("Save", "class": "btn btn-big btn-success") }}
-    </li>
-</ul>
+{{ link_to("/backend/users/index", "&larr; Go Back" , 'class' :'btn btn-outline-primary') }}
 
- 
+{{ submit_button("Save", "class": "btn btn-big btn-success float-right") }}
+
+<h1>Edit users</h1>
+
 <div class="center scaffold">
-    <h2>Edit users</h2>
 
     <div role="tabpanel">
     <ul  class="nav nav-tabs" role="tablist" >

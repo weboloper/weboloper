@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 17 May 2017, 09:54:21
+-- Üretim Zamanı: 17 May 2017, 13:12:51
 -- Sunucu sürümü: 5.7.14
 -- PHP Sürümü: 7.0.10
 
@@ -83,10 +83,18 @@ INSERT INTO `permissions` (`id`, `profilesId`, `resource`, `action`) VALUES
 (1, 1, 'profiles', 'index'),
 (2, 1, 'profiles', 'edit'),
 (3, 1, 'profiles', 'delete'),
-(4, 1, 'permissions', 'index'),
-(5, 2, 'profiles', 'index'),
-(6, 2, 'profiles', 'edit'),
-(7, 3, 'profiles', 'index');
+(4, 1, 'profiles', 'create'),
+(5, 1, 'users', 'index'),
+(6, 1, 'users', 'edit'),
+(7, 1, 'users', 'delete'),
+(8, 1, 'users', 'create'),
+(9, 1, 'permissions', 'index'),
+(10, 2, 'profiles', 'index'),
+(11, 2, 'profiles', 'edit'),
+(12, 2, 'users', 'index'),
+(13, 2, 'users', 'edit'),
+(14, 3, 'profiles', 'index'),
+(15, 3, 'users', 'index');
 
 -- --------------------------------------------------------
 
@@ -256,12 +264,12 @@ ALTER TABLE `users`
 -- Tablo için AUTO_INCREMENT değeri `email_confirmations`
 --
 ALTER TABLE `email_confirmations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- Tablo için AUTO_INCREMENT değeri `failed_logins`
 --
 ALTER TABLE `failed_logins`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Tablo için AUTO_INCREMENT değeri `password_changes`
 --
@@ -271,7 +279,7 @@ ALTER TABLE `password_changes`
 -- Tablo için AUTO_INCREMENT değeri `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- Tablo için AUTO_INCREMENT değeri `profiles`
 --
@@ -291,12 +299,12 @@ ALTER TABLE `reset_passwords`
 -- Tablo için AUTO_INCREMENT değeri `success_logins`
 --
 ALTER TABLE `success_logins`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- Tablo için AUTO_INCREMENT değeri `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
