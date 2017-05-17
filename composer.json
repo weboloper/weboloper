@@ -1,6 +1,6 @@
 {
     "name": "weboloper/weboloper",
-    "description": "This is a sample application for the Phalcon PHP Framework",
+    "description": "A multi-module Phalcon application (Acl, Auth, SecurityPlugin, Volt)",
     "version": "1.0.0",
     "keywords": [
         "phalcon",
