@@ -1,7 +1,7 @@
 # weboloper
 A multi-module Phalcon application  (Acl, Auth, SecurityPlugin, Volt)
 
-This is a sample multi-module application for [Phalcon Framework](https://github.com/phalcon/cphalcon). Weboloper is a more simple and multi-module version of official Phalcon application [Vökuró](https://github.com/phalcon/vokuro)
+This is a sample multi-module application for [Phalcon Framework](https://github.com/phalcon/cphalcon). Weboloper is a multi-module, simple version of official Phalcon application [Vökuró](https://github.com/phalcon/vokuro)
 
 
 ## Get Started
