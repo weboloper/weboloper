@@ -1,43 +1,20 @@
 <?php
 
-use Phalcon\Db\Adapter\Pdo\Mysql as DbAdapter;
-use Phalcon\Mvc\Router;
-
 use Phalcon\Mvc\Dispatcher;
+use Phalcon\Mvc\Router;
 use Phalcon\Events\Manager as EventsManager;
-
-
-use Weboloper\Plugins\Security\SecurityPlugin;
-use Weboloper\Plugins\Security\NotFoundPlugin;
-
-use Weboloper\Auth\Auth;
-use Weboloper\Mail\Mail;
-
+use Phalcon\Db\Adapter\Pdo\Mysql as DbAdapter;
 use Phalcon\Session\Adapter\Files as SessionAdapter;
-
 use Phalcon\Flash\Direct as Flash;
 use Phalcon\Flash\Session as FlashSession;
 use Phalcon\Security;
-
 use Phalcon\Mvc\Model\Metadata\Files as MetaDataAdapter;
-
+use Weboloper\Auth\Auth;
+use Weboloper\Mail\Mail;
+use Weboloper\Plugins\Security\SecurityPlugin;
+use Weboloper\Plugins\Security\NotFoundPlugin;
 
  
-$di->set('modelsMetadata', function () {
-    $config = $this->getConfig();
-    return new MetaDataAdapter([
-        'metaDataDir' => $config->application->cacheDir . 'metaData/'
-    ]);
-});
-
-
-
-$di->set('url', function() {
-    $url = new \Phalcon\Mvc\Url();
-    $url->setBaseUri( '/' );
-    return $url;
-});
-
 
 $di->setShared('config', function () {
     $config = include CORE_PATH . '/config/config.php';
@@ -60,6 +37,19 @@ $di->set('db', function () {
             "dbname" => $config->database->dbname
         ]
     );
+});
+
+$di->set('modelsMetadata', function () {
+    $config = $this->getConfig();
+    return new MetaDataAdapter([
+        'metaDataDir' => $config->application->cacheDir . 'metaData/'
+    ]);
+});
+
+$di->set('url', function() {
+    $url = new \Phalcon\Mvc\Url();
+    $url->setBaseUri( '/' );
+    return $url;
 });
 
 /**
