@@ -1,0 +1,15 @@
+{
+    "name": "weboloper/weboloper",
+    "description": "This is a sample application for the Phalcon PHP Framework",
+    "version": "1.0.0",
+    "keywords": [
+        "phalcon",
+        "framework",
+        "sample app",
+        "weboloper"
+    ],
+     
+    "require": {
+        "swiftmailer/swiftmailer": "^5.4" 
+    } 
+}
