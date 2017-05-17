@@ -26,6 +26,8 @@ Also you can override application config by creating `app/config/config.php`
 
 
 ## Notes
+### Auth
+Password for all users set as "12312313"
 
 ### Modules
 Weboloper uses Frontend module for publishing, and Backend module for administration.
