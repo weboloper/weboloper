@@ -7,10 +7,6 @@ use Weboloper\Models\RememberTokens;
 use Weboloper\Models\SuccessLogins;
 use Weboloper\Models\FailedLogins;
 
-/**
- * Vokuro\Auth\Auth
- * Manages Authentication/Identity Management in Vokuro
- */
 class Auth extends Component
 {
     /**
