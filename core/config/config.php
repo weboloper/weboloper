@@ -9,7 +9,7 @@ return new Config([
         'host' => '127.0.0.1',
         'username' => 'root',
         'password' => '',
-        'dbname' => 'weboloper'
+        'dbname' => 'aciksozluk'
     ],
     'application' => [
         'name'           => 'Weboloper',

@@ -10,8 +10,10 @@ use Phalcon\Mvc\Dispatcher;
 use Phalcon\Db\Adapter\Pdo\Mysql;
 use Phalcon\Mvc\ModuleDefinitionInterface;
 
+use Weboloper\Plugins\Security\SecurityPlugin;
 use Weboloper\Plugins\Security\NotFoundPlugin;
 
+ 
 use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
 
 use Weboloper\Volt\VoltFunctions;
@@ -45,6 +47,7 @@ class Module implements ModuleDefinitionInterface
     public function registerServices(DiInterface $di)
     {
 
+
         /**
          * Dispatcher use a default namespace
          */
@@ -54,7 +57,7 @@ class Module implements ModuleDefinitionInterface
             
             // $eventsManager->attach('dispatch:beforeDispatch', new SecurityPlugin);
 
-            // $eventsManager->attach('dispatch:beforeException', new NotFoundPlugin);
+            $eventsManager->attach('dispatch:beforeException', new NotFoundPlugin);
 
             $dispatcher = new Dispatcher;
             $dispatcher->setEventsManager($eventsManager);

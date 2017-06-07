@@ -157,7 +157,7 @@ class SecurityPlugin extends Plugin
 		// if a controller set private you must set public resources too
 		return $privateResources = array(
 				'profiles'    	=> array('index', 'edit', 'delete', 'create'),
-				'users'    		=> array('index', 'edit', 'delete', 'create'),
+				'users'    		=> array('index', 'edit', 'delete', 'create', 'search'),
 				'permissions'   => array('index')
 			);
 	}
